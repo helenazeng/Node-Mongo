@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+	<h1>Current Projects</h1>
+
+	<ul>
+    	<li ng-repeat='project in project'><a href= "/#/project/{{project._id}}">{{project.title}} : {{project.description}} - People: {{project.people}} </a>
+    	<a href = "/#/project/delete/{{project._id}}">
+    		<i class = "glyphicon glyphicon-remove"></i>
+    	</a>
+    	</li>
+	</ul>
+	<p>
+    	<a href="/#/add-project">Add a Project</a>
+	</p>
+ 	
+</html>
