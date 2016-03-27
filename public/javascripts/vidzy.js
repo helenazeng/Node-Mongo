@@ -3,6 +3,12 @@ var app = angular.module('Vidzy', ['ngResource', 'ngRoute']);
 app.config(['$routeProvider', function($routeProvider){
     $routeProvider
         .when('/', {
+            templateUrl: 'partials/fake.html'
+        })
+        .when('/login', {
+            templateUrl: 'partials/login.html'
+        })
+        .when('/home', {
             templateUrl: 'partials/home.html',
     		controller: 'HomeCtrl'
         })
@@ -29,8 +35,6 @@ app.controller('HomeCtrl', ['$scope', '$resource',
         Project.query(function(project){
             $scope.project = project;
         });
-
-
     }]);
 
 app.controller('AddProjectCtrl', ['$scope', '$resource', '$location',
